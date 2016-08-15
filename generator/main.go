@@ -69,7 +69,7 @@ func main() {
 	dl := map[string]bool{}
 	for _, list := range sl {
 		for _, domain := range list {
-			dl[domain] = true
+			dl[strings.ToLower(strings.TrimSpace(domain))] = true
 		}
 	}
 
