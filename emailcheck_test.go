@@ -17,8 +17,16 @@ func TestIsDisposable(t *testing.T) {
 }
 
 func TestIsRegularEmail(t *testing.T) {
-	regularEmails := []string{"prapto@google.com", "staff@github.com", "kadalkesit@fb.com"}
+	regularEmails := []string{"prapto@google.com", "staff@github.com", "kadalkesit@fb.com", "postmaster@simukti.net"}
 	for _, email := range regularEmails {
+		isDisposable := IsDisposableEmail(email)
+		assert.False(t, isDisposable)
+	}
+}
+
+func TestWithInvalidEmailAddressWhichShouldBeFalse(t *testing.T) {
+	invalidEmails := []string{"prapto", "sodiq", "holil"}
+	for _, email := range invalidEmails {
 		isDisposable := IsDisposableEmail(email)
 		assert.False(t, isDisposable)
 	}
