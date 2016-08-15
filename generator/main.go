@@ -14,6 +14,7 @@ import (
 	"net/url"
 	"os"
 	"path/filepath"
+	"sort"
 	"strings"
 )
 
@@ -65,13 +66,13 @@ func main() {
 		os.Remove(tempFile)
 	}
 
-	dl := map[string]bool{}
-
+	dl := []string{}
 	for _, list := range sl {
 		for _, domain := range list {
-			dl[strings.ToLower(domain)] = true
+			dl = append(dl, strings.ToLower(domain))
 		}
 	}
+	sort.Strings(dl)
 
 	destFile, _ := filepath.Abs(outputFile)
 	out, outErr := os.Create(destFile)
@@ -90,8 +91,8 @@ func main() {
 	w.WriteString("package emailcheck\n\n")
 	w.WriteString("var (\n")
 	w.WriteString("\tdisposableDomain = map[string]bool{\n")
-	for d, bo := range dl {
-		w.WriteString(fmt.Sprintf("\t\t\"%s\":%v,\n", d, bo))
+	for _, do := range dl {
+		w.WriteString(fmt.Sprintf("\t\t\"%s\":%v,\n", do, true))
 	}
 	w.WriteString("\t}\n")
 	w.WriteString(")\n")
