@@ -7,7 +7,7 @@
 package emailcheck
 
 var (
-	disposableDomain = map[string]bool{
+	disposableDomains = map[string]bool{
 		"0-mail.com":                              true,
 		"027168.com":                              true,
 		"0815.ru":                                 true,

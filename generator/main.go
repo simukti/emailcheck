@@ -95,7 +95,7 @@ func main() {
 	w.WriteString(fmt.Sprintf("// --- PARSED FROM : %s ---\n\n", sourceUrl))
 	w.WriteString("package emailcheck\n\n")
 	w.WriteString("var (\n")
-	w.WriteString("\tdisposableDomain = map[string]bool{\n")
+	w.WriteString("\tdisposableDomains = map[string]bool{\n")
 	for _, do := range res {
 		w.WriteString(fmt.Sprintf("\t\t\"%s\":%v,\n", do, true))
 	}
