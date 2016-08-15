@@ -1,8 +1,8 @@
 ## EMAILCHECK
-A small and handy Go utility to check whether email address is disposable.
+A small and handy Golang utility to check whether email address is disposable email.
 
 ### DETAILS
-Disposable email domains is ported from [FGRibreau/mailchecker](https://github.com/FGRibreau/mailchecker/blob/master/list.json).
+Disposable email domain list is ported from [FGRibreau/mailchecker](https://github.com/FGRibreau/mailchecker/blob/master/list.json), with duplication removal and transform all domain name to lowercase.
 
 ### INSTALL
 `go get -u -v github.com/simukti/emailcheck`
@@ -14,7 +14,11 @@ cd $GOPATH/src/github.com/simukti/emailcheck
 
 cd ./generator && go run main.go && cd ../ && go fmt .
 ```
-### USAGE SAMPLE
+
+### TEST
+`$ go test -v ./...`
+
+### HOW TO USE
 ```go
 package main
 
@@ -23,26 +27,16 @@ import (
 )
 
 func main() {
-    isDisposable := emailcheck.IsDisposableEmail("kadalkesit@mailinator.com")
-    if isDisposable {
+    emailAddress := "kadalkesit@mailinator.com"
+    
+    // validate email format here :
+    // ....
+    
+    if isDisposable := emailcheck.IsDisposableEmail(emailAddress); isDisposable {
         // detected as disposable email
-        // do something here
+        // do something here    
     }
 }
-```
-
-### TEST
-```
-$ go test -v ./...
-=== RUN   TestIsDisposable
---- PASS: TestIsDisposable (0.00s)
-=== RUN   TestIsRegularEmail
---- PASS: TestIsRegularEmail (0.00s)
-PASS
-ok  	github.com/simukti/emailcheck	0.009s
-testing: warning: no tests to run
-PASS
-ok  	github.com/simukti/emailcheck/generator	0.008s
 ```
 
 ### LICENSE
