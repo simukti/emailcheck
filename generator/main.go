@@ -14,8 +14,8 @@ import (
 	"net/url"
 	"os"
 	"path/filepath"
-	"strings"
 	"sort"
+	"strings"
 )
 
 const (
