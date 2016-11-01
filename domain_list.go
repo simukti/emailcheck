@@ -1658,6 +1658,8 @@ var (
 		"spritzzone.de":                        true,
 		"spybox.de":                            true,
 		"squizzy.de":                           true,
+		"squizzy.eu":                           true,
+		"squizzy.net":                          true,
 		"sr.ro.lt":                             true,
 		"sry.li":                               true,
 		"ss.undo.it":                           true,
