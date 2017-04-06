@@ -4,8 +4,9 @@
 package emailcheck
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestIsDisposable(t *testing.T) {
