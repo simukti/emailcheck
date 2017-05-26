@@ -1229,6 +1229,7 @@ var (
 		"mucincanon.com":                       true,
 		"mutant.me":                            true,
 		"mvrht.com":                            true,
+		"mvrht.net":                            true,
 		"mwarner.org":                          true,
 		"mx0.wwwnew.eu":                        true,
 		"mxfuel.com":                           true,
