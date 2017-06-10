@@ -1805,6 +1805,7 @@ var (
 		"timgiarevn.com":                       true,
 		"timkassouf.com":                       true,
 		"tinyurl24.com":                        true,
+		"tipsb.com":                            true,
 		"tittbit.in":                           true,
 		"tizi.com":                             true,
 		"tlpn.org":                             true,
