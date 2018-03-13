@@ -2942,6 +2942,7 @@ var (
 		"nutpa.net":                               true,
 		"nuts2trade.com":                          true,
 		"nwldx.com":                               true,
+		"nwytg.com":                               true,
 		"ny7.me":                                  true,
 		"nypato.com":                              true,
 		"o.cfo2go.ro":                             true,
